@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #fff;
+}
+
+.main {
+    width: 1200px;
+    min-height: 100vh;
+    max-width: 100%;
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    height: 48px;
+    background-color: #333;
+}
+
+.nav__list {
+    display: flex;
+    list-style: none;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: #fff;
+    margin-right: 48px;
+}
+
+/* Article */
+h1 {
+    line-height: 2rem;
+}
+
+article {
+    padding: 0 16px;
+    line-height: 1.6rem;
+}
+
+article img {
+    width: 640px;
+    max-width: 100%;
+    display: block;
+    margin: 32px auto;
+    
+}
+
+
+/* nav mobile */
+.nav__overlay.open {
+    display: block;
+}
+.nav__overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+    animation: slideIn linear .3s;
+}
+
+.nav__bar-btn
+{
+    margin-left: 10px;
+    font-size: 1.5rem;
+    color: #fff;
+    display: none;
+}
+.nav__mobile.open {
+   display: block;
+    transform: translateX(0) !important;
+    transition: transform linear .2s;
+}
+
+
+.nav__mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #fff;
+    width: 250px;
+    max-width:100%;
+    transform: translateX(-100%);
+    transition: transform linear .2s;
+    
+    
+}
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        
+        
+    }
+    to {
+        opacity: 1;
+       
+    }
+}
+
+
+.nav__mobile-list {
+    list-style: none;
+    font-size: 1.3rem;
+    line-height: 2.3rem;
+}
+
+.nav__mobile-link {
+    color:#000;
+    text-decoration: none;
+}
+
+.nav__mobile-close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 1.5rem;
+}
+
+@media  (max-width: 1023px){
+    .nav__bar-btn {
+        display: block;
+        
+    }
+    .nav__pc{
+        display: none;
+    }
+}
